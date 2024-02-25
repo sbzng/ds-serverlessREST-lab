@@ -1,9 +1,9 @@
 // export type Language = 'English' | 'Frenc
 
-export type Movie =   {
+export type Movie = {
   id: number,
   backdrop_path: string,
-  genre_ids: number[ ],
+  genre_ids: number[],
   original_language: string,
   original_title: string,
   adult: boolean,
@@ -17,4 +17,15 @@ export type Movie =   {
   vote_count: number
 }
 
- 
+export type MovieCast = {
+  movieId: number;
+  actorName: string;
+  roleName: string;
+  roleDescription: string;
+};
+// Used to validate the query string og HTTP Get requests
+export type MovieCastMemberQueryParams = {
+  movieId: string;
+  actorName?: string;
+  roleName?: string
+}
