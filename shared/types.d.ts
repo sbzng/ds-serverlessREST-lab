@@ -29,3 +29,8 @@ export type MovieCastMemberQueryParams = {
   actorName?: string;
   roleName?: string
 }
+
+export type MovieResponse = {
+  data: Record<string, any>;
+  cast?: Record<string, any>[];
+};
